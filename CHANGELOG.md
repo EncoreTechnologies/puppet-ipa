@@ -8,6 +8,11 @@
 
 * Fixed/added ciphers for RHEL/CentOS 8. Also allowed ciphers to be passed in empty for debugging.
   Contributed by Nick Maludy (@nmaludy)
+  
+* Fixed client creates check on RHE/CentOS 8, now checks for `/var/lib/ipa-client/sysrestore/sysrestore.state`.
+  `/etc/ipa/default.conf` no longer exists in new version.
+  Contributed by Nick Maludy (@nmaludy)
+
 
 ## v0.1.0 (2021-01-14)
 * Initial release
