@@ -1,6 +1,6 @@
 {
   "name": "encore-ipa",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "Encore Technologies",
   "summary": "Manages IPA servers and clients.",
   "license": "Apache-2.0",
@@ -14,7 +14,7 @@
     },
     {
       "name": "puppet/firewalld",
-      "version_requirement": ">= 3.0.0 < 5.0.0"
+      "version_requirement": ">= 3.0.0 < 6.0.0"
     },
     {
       "name": "ghoneycutt/facter",
@@ -22,11 +22,11 @@
     },
     {
       "name": "puppet/epel",
-      "version_requirement": ">= 3.0.0 < 5.0.0"
+      "version_requirement": ">= 3.0.0 < 6.0.0"
     },
     {
       "name": "puppetlabs/yumrepo_core",
-      "version_requirement": ">= 1.0.0 < 2.0.0"
+      "version_requirement": ">= 1.0.0 < 3.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -57,10 +57,10 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.7.0 <= 8.0.0"
+      "version_requirement": ">= 6.0.0 <= 8.0.0"
     }
   ],
-  "pdk-version": "3.0.0",
-  "template-url": "pdk-default#3.0.0",
-  "template-ref": "tags/3.0.0-0-g056e50d"
+  "pdk-version": "3.0.1",
+  "template-url": "pdk-default#3.0.1",
+  "template-ref": "tags/3.0.1-0-gd13288a"
 }
