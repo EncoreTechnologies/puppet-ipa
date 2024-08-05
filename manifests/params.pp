@@ -90,7 +90,7 @@ class ipa::params {
           #$pki_ssl_protocol_range = $pki_ssl_protocol_range_tls12
           $pki_ssl_protocol_range = ''
         }
-        default: { fail("ERROR: Unsupported RHEL release: ${facts['os']['release']['full']}") }
+        default: { warning("ERROR: Unsupported RHEL release: ${facts['os']['release']['full']}") }
       }
       $ldaputils_package_name    = 'openldap-clients'
       $ipa_client_package_name   = 'ipa-client'
@@ -98,7 +98,7 @@ class ipa::params {
     }
     'Debian': {
       case $facts['os']['release']['major'] {
-        /(16.04)/,/(18.04)/,/(20.04)/,/(22.04)/: {
+        /(18.04)/,/(20.04)/,/(22.04)/,/(24.04)/: {
           $service_stop_epp    = 'systemctl stop <%= $service %>'
           $service_restart_epp = 'systemctl restart <%= $service %>'
 
@@ -109,7 +109,7 @@ class ipa::params {
           $pki_ssl_ciphers        = undef
           $pki_ssl_protocol_range = undef
         }
-        default: { fail("ERROR: Unsupported Ubuntu release: ${facts['os']['release']['full']}") }
+        default: { warning("ERROR: Unsupported Ubuntu release: ${facts['os']['release']['full']}") }
       }
       $ldaputils_package_name    = 'ldap-utils'
       $ipa_client_package_name   = 'freeipa-client'
