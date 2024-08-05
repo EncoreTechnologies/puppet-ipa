@@ -2,6 +2,15 @@
 
 ## Development
 
+## v0.2.4 (2024.08.05)
+* Added support for Ubuntu 24.04
+ Contributed by Rick Paxton (@paxri01)
+
+ * Remove support for EL7 and Ubuntu 16.04
+ Contributed by Rick Paxton (@paxri01)
+
+ ## v0.2.3 
+
 * Fixed bug around nsswitch.conf which could create duplicate lines for `sudoers` and `automount`
   Contributed by Greg Perry (@gsperry2011)
 
