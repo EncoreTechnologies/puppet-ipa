@@ -39,17 +39,6 @@ class ipa::params {
   case $facts['os']['family'] {
     'RedHat': {
       case $facts['os']['release']['major'] {
-        /(7)/: {
-          $service_stop_epp    = 'systemctl stop <%= $service %>'
-          $service_restart_epp = 'systemctl restart <%= $service %>'
-
-          $ds_ssl_ciphers         = $ds_ssl_ciphers_tls12
-          $ds_ssl_min_version     = $ds_ssl_min_version_tls12
-          $nss_ssl_ciphers        = $nss_ssl_ciphers_tls12
-          $nss_ssl_protocols      = $nss_ssl_protocols_tls12
-          $pki_ssl_ciphers        = $pki_ssl_ciphers_tls12
-          $pki_ssl_protocol_range = $pki_ssl_protocol_range_tls12
-        }
         /(8)/,/(9)/: {
           $service_stop_epp    = 'systemctl stop <%= $service %>'
           $service_restart_epp = 'systemctl restart <%= $service %>'
