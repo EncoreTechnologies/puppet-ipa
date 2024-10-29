@@ -68,7 +68,7 @@ Puppet::Type.newtype(:ipa_user) do
 
   newproperty(:sshpubkeys, array_matching: :all) do
     validate do |value|
-      # note: Puppet automatically detects if the value is an array and calls this validate()
+      # NOTE: Puppet automatically detects if the value is an array and calls this validate()
       #       on each item/value within the array
       unless value.is_a?(String)
         raise ArgumentError, "sshpubkeys are expected to be String, given: #{value.class.name}"
