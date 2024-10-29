@@ -6,13 +6,14 @@ module PuppetX::Encore
 end
 
 module PuppetX::Encore::Ipa
-  # Class for caching HTTP clients
-  class Cache
-    include Singleton
-    attr_accessor :cached_clients
+end
 
-    def initialize
-      @cached_clients = {}
-    end
+# Class for caching HTTP clients
+class PuppetX::Encore::Ipa::Cache
+  include Singleton
+  attr_accessor :cached_clients
+
+  def initialize
+    @cached_clients = {}
   end
 end

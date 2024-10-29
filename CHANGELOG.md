@@ -2,6 +2,11 @@
 
 ## Development
 
+## v0.2.5 (2024.10.29)
+
+- PDK fixes
+- metadata version updates
+
 ## v0.2.4 (2024.08.05)
 * Added support for Ubuntu 24.04
  Contributed by Rick Paxton (@paxri01)

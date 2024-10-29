@@ -148,7 +148,7 @@ class Puppet::Provider::Ipa < Puppet::Provider
     response = client.post(api_make_url('/session/login_password'),
                            form: form,
                            headers: headers)
-    # note: don't check for API response 'error' key here because the response
+    # NOTE: don't check for API response 'error' key here because the response
     # is plain text and not JSON
     if persist_auth
       cookies = response.get_fields('Set-Cookie')

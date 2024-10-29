@@ -111,7 +111,7 @@ Puppet::Type.type(:ipa_user).provide(:default, parent: Puppet::Provider::Ipa) do
       body['params'][1]['mail'] = resource[:mail] if resource[:mail]
 
       # fill out additional LDAP attributes that the user is asking to sync
-      if resource[:ldap_attributes]
+      if resource.key?(:ldap_attributes) && resource[:ldap_attributes]
         resource[:ldap_attributes].each do |attr_key, attr_value|
           body['params'][1][attr_key] = attr_value
         end

@@ -11,7 +11,7 @@ Facter.add(:ipa_login_defs) do
       param = match.captures[0]
       value = match.captures[1]
       # if the string only contains numbers, cast it to a number
-      value = value.to_i if value =~ %r{^\d+$}
+      value = value.to_i if value.match?(%r{^\d+$})
       login_defs[param] = value
     end
     login_defs
