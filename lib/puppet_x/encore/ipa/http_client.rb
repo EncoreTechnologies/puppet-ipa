@@ -8,6 +8,9 @@ require 'puppet'
 module PuppetX::Encore
 end
 
+module PuppetX::Encore::Ipa
+end
+
 # Client class for HTTP calls
 class PuppetX::Encore::Ipa::HTTPClient
   attr_accessor :headers

@@ -5,6 +5,9 @@ require 'singleton'
 module PuppetX::Encore
 end
 
+module PuppetX::Encore::Ipa
+end
+
 # Class for caching HTTP clients
 class PuppetX::Encore::Ipa::Cache
   include Singleton
